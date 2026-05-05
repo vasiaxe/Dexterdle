@@ -8,6 +8,9 @@ Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style de
 
 <img width="1512" height="982" alt="Screenshot 2026-05-05 at 8 09 01 PM" src="https://github.com/user-attachments/assets/b88dd544-1b42-43c5-87a5-4dcd111c31c0" />
 
+## Live Demo
+
+Play Dexterdle here: https://vasiaxe.github.io/Dexterdle/
 
 ## Features
 
