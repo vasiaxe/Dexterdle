@@ -1,6 +1,6 @@
 # Dexterdle
 
-Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style deduction games. The player guesses a hidden character and receives color-coded feedback based on shared attributes such as gender, role, affiliation, first season, status, and relation to Dexter.
+Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style deduction games. The player guesses a hidden character and receives color-coded feedback based on shared attributes such as gender, role, affiliation, first season, status, and relation to Dexter
 
 ## Preview
 
@@ -24,11 +24,11 @@ Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style de
 
 ## How to Play
 
-1. Type a character name into the search bar.
-2. Select a character from the dropdown.
-3. Submit your guess.
-4. Use the color feedback to narrow down the hidden character.
-5. Guess correctly before you run out of attempts.
+1. Type a character name into the search bar
+2. Select a character from the dropdown
+3. Submit your guess
+4. Use the color feedback to narrow down the hidden character
+5. Guess correctly before you run out of attempts
 
 ## Clue System
 
@@ -81,8 +81,8 @@ The project is split by function:
 
 ## Disclaimer
 
-Dexterdle is a fan-made educational project. Dexter and related character names, images, and references belong to their respective copyright holders. This project is not affiliated with, endorsed by, or sponsored by the owners of Dexter.
+Dexterdle is a fan-made educational project. Dexter and related character names, images, and references belong to their respective copyright holders. This project is not affiliated with, endorsed by, or sponsored by the owners of Dexter
 
 ## License
 
-The source code is licensed under the MIT License. Dexter-related names, images, audio, and references are not covered by this license and belong to their respective owners.
+The source code is licensed under the MIT License. Dexter-related names, images, audio, and references are not covered by this license and belong to their respective owners
