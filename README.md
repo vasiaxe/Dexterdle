@@ -4,9 +4,14 @@ Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style de
 
 ## Preview
 
-<img width="1512" height="982" alt="Screenshot 2026-05-05 at 8 14 20 PM" src="https://github.com/user-attachments/assets/a2cf9c63-36a1-4306-8022-87072e70d746" />
+<img width="1512" height="982" alt="Screenshot 2026-05-05 at 11 33 37 PM" src="https://github.com/user-attachments/assets/1026f9a1-619c-4e88-acba-e487fdadf6b0" />
 
-<img width="1512" height="982" alt="Screenshot 2026-05-05 at 8 09 01 PM" src="https://github.com/user-attachments/assets/b88dd544-1b42-43c5-87a5-4dcd111c31c0" />
+
+<img width="1512" height="982" alt="Screenshot 2026-05-05 at 11 34 19 PM" src="https://github.com/user-attachments/assets/8e11e9d7-0931-4573-b3d1-40271e9a452a" />
+
+<img width="1512" height="982" alt="Screenshot 2026-05-05 at 11 34 47 PM" src="https://github.com/user-attachments/assets/b003a069-c789-45a5-a2fe-20865349421d" />
+
+<img width="1512" height="982" alt="Screenshot 2026-05-05 at 11 35 11 PM" src="https://github.com/user-attachments/assets/271666ed-cb6b-4a2d-b775-7127944c939c" />
 
 ## Live Demo
 
