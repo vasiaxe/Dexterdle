@@ -122,11 +122,189 @@
   transition: background 0.45s ease, border-color 0.45s ease;
 }
 
-.how-to-play-content ol {
-  margin: 12px 0 0;
-  padding-left: 22px;
+.how-to-play-content {
+  margin-top: 12px;
+}
+
+.how-to-play-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+  gap: 22px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 74% 40%, rgba(193, 18, 31, 0.18), transparent 42%),
+    rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+
+.section-kicker {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.how-to-play-hero h3 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 1.45rem;
+  line-height: 1.2;
+}
+
+.how-to-play-hero p {
+  margin: 0;
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1.55;
+}
+
+.blood-slide-wrapper {
+  position: relative;
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blood-slide-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border-radius: 999px;
+  background: rgba(193, 18, 31, 0.12);
+  filter: blur(22px);
+}
+
+.blood-slide-image {
+  position: relative;
+  width: min(100%, 420px);
+  height: auto;
+  filter:
+    drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35))
+    drop-shadow(0 0 16px rgba(193, 18, 31, 0.18));
+  transform: rotate(-2deg);
+  animation: blood-slide-hover 3.2s ease-in-out infinite;
+}
+
+@keyframes blood-slide-hover {
+  0% {
+    transform: translateY(0) translateX(0) rotate(-2deg) scale(1);
+    filter:
+      drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35))
+      drop-shadow(0 0 14px rgba(193, 18, 31, 0.16));
+  }
+
+  35% {
+    transform: translateY(-12px) translateX(5px) rotate(1deg) scale(1.025);
+    filter:
+      drop-shadow(0 28px 38px rgba(0, 0, 0, 0.48))
+      drop-shadow(0 0 28px rgba(193, 18, 31, 0.34));
+  }
+
+  70% {
+    transform: translateY(5px) translateX(-4px) rotate(-4deg) scale(1.01);
+    filter:
+      drop-shadow(0 14px 22px rgba(0, 0, 0, 0.34))
+      drop-shadow(0 0 20px rgba(193, 18, 31, 0.26));
+  }
+
+  100% {
+    transform: translateY(0) translateX(0) rotate(-2deg) scale(1);
+    filter:
+      drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35))
+      drop-shadow(0 0 14px rgba(193, 18, 31, 0.16));
+  }
+}
+
+.how-to-play-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.instruction-card {
+  min-width: 0;
+  padding: 14px;
+  border-radius: 16px;
+  background: var(--name-cell);
+  border: 1px solid var(--chip-border);
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    transform 0.2s ease;
+}
+
+.instruction-card:hover {
+  transform: translateY(-2px);
+}
+
+.instruction-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 10px;
+  border-radius: 999px;
+  background: rgba(193, 18, 31, 0.18);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: bold;
+}
+
+.instruction-card h4 {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.instruction-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.mini-clue-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.mini-clue {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  color: white;
+  font-weight: bold;
+}
+
+.mini-clue span {
+  font-size: 0.86rem;
+  opacity: 0.92;
+}
+
+.mini-green {
+  background: var(--correct);
+}
+
+.mini-yellow {
+  background: var(--close);
+}
+
+.mini-red {
+  background: var(--wrong);
 }
 
 .legend-grid {
@@ -175,4 +353,28 @@
 
 .legend-spoiler {
   background: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .how-to-play-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .blood-slide-wrapper {
+    order: -1;
+  }
+
+  .how-to-play-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mini-clue-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .how-to-play-grid {
+    grid-template-columns: 1fr;
+  }
 }

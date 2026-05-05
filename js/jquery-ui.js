@@ -1,4 +1,11 @@
 $(document).ready(function() {
+  $("#toggle-how-to-play").on("click", function() {
+    $(".how-to-play-content").slideToggle(200);
+
+    const currentText = $(this).text();
+    $(this).text(currentText === "Hide" ? "Show" : "Hide");
+  });
+
   $("#toggle-help").on("click", function() {
     $(".legend-grid").slideToggle(200);
 
@@ -12,11 +19,4 @@ $(document).ready(function() {
     const currentText = $(this).text();
     $(this).text(currentText === "Hide" ? "Show" : "Hide");
   });
-});
-
-$("#toggle-how-to-play").on("click", function() {
-  $(".how-to-play-content").slideToggle(200);
-
-  const currentText = $(this).text();
-  $(this).text(currentText === "Hide" ? "Show" : "Hide");
 });
