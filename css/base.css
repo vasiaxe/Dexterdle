@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at top, var(--bg-glow), transparent 36%),
+    var(--bg);
+  color: var(--text);
+  transition: background 0.45s ease, color 0.45s ease;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.hidden {
+  display: none;
+}

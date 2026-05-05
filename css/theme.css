@@ -1,0 +1,49 @@
+:root {
+  --bg: #13070a;
+  --bg-glow: rgba(193, 18, 31, 0.14);
+  --card: #1f1115;
+  --card-border: #4a1f27;
+  --text: #f5f0f0;
+  --muted: #d6c7c7;
+  --accent: #c1121f;
+  --accent-hover: #e01e2d;
+  --input-bg: #100608;
+  --input-border: #6b3038;
+  --name-cell: #2a1a1f;
+  --wrong: #8b1e2d;
+  --correct: #1f7a4d;
+  --close: #b8860b;
+  --chip-bg: #2a1a1f;
+  --chip-border: #5c2931;
+  --shadow: rgba(0, 0, 0, 0.35);
+  --knife-shell: rgba(37, 20, 25, 0.92);
+  --knife-shell-border: #6b3038;
+  --slash: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.95), transparent);
+  --legend-bg: rgba(255, 255, 255, 0.03);
+  --blood: #a30d18;
+}
+
+body.light-mode {
+  --bg: #f7f1eb;
+  --bg-glow: rgba(255, 255, 255, 0.72);
+  --card: #fffaf4;
+  --card-border: #e2cfc1;
+  --text: #2a1712;
+  --muted: #6b5149;
+  --accent: #7f1d1d;
+  --accent-hover: #991b1b;
+  --input-bg: #ffffff;
+  --input-border: #c9aa9a;
+  --name-cell: #f0e1d7;
+  --wrong: #d65b5b;
+  --correct: #2f8f62;
+  --close: #c59b25;
+  --chip-bg: #f0e1d7;
+  --chip-border: #d5b9aa;
+  --shadow: rgba(70, 40, 25, 0.16);
+  --knife-shell: rgba(255, 248, 241, 0.95);
+  --knife-shell-border: #d7b6a5;
+  --slash: linear-gradient(90deg, transparent, rgba(127, 29, 29, 0.45), transparent);
+  --legend-bg: rgba(255, 255, 255, 0.75);
+  --blood: transparent;
+}

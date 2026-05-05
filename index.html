@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dexterdle</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/title-knife.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/controls.css" />
+  <link rel="stylesheet" href="css/game.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body class="dark-mode">
+  <main class="app">
+    <section class="hero">
+      <div class="title-row">
+        <h1 class="title">Dexterdle</h1>
+
+        <button id="theme-toggle" class="knife-button" aria-label="Toggle light mode">
+          <svg
+            class="knife-svg"
+            viewBox="0 0 240 80"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="bladeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f8fbff" />
+                <stop offset="45%" stop-color="#d7dee6" />
+                <stop offset="75%" stop-color="#b9c3ce" />
+                <stop offset="100%" stop-color="#8e9aa8" />
+              </linearGradient>
+
+              <linearGradient id="handleGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#5b372d" />
+                <stop offset="45%" stop-color="#3b211b" />
+                <stop offset="100%" stop-color="#1d0f0d" />
+              </linearGradient>
+            </defs>
+
+            <path
+              class="knife-blade-main"
+              d="M18 41 C44 26, 84 18, 134 21 C125 27, 116 34, 104 40 C116 47, 126 53, 134 60 C83 62, 42 54, 18 41 Z"
+            />
+
+            <path
+              class="knife-blade-edge"
+              d="M30 40 C54 30, 84 25, 118 27"
+            />
+
+            <rect
+              class="knife-bolster"
+              x="132"
+              y="26"
+              width="12"
+              height="28"
+              rx="4"
+            />
+
+            <path
+              class="knife-handle-shape"
+              d="M143 26
+                 C161 20, 188 21, 212 30
+                 C218 33, 222 37, 222 40
+                 C222 43, 218 47, 212 50
+                 C188 59, 161 60, 143 54
+                 Z"
+            />
+
+            <circle class="knife-rivet" cx="173" cy="40" r="4" />
+            <circle class="knife-rivet" cx="194" cy="40" r="4" />
+          </svg>
+
+          <span class="knife-drip drip-one"></span>
+          <span class="knife-drip drip-two"></span>
+          <span class="knife-drip drip-three"></span>
+        </button>
+      </div>
+
+      <p>Guess the hidden Dexter character using the clues after each attempt</p>
+    </section>
+
+    <section class="game-card">
+      <section class="controls-panel">
+        <div class="control-group">
+          <label for="difficulty-select">Difficulty</label>
+          <select id="difficulty-select">
+            <option value="easy">Easy — 10 attempts</option>
+            <option value="normal" selected>Normal — 8 attempts</option>
+            <option value="hard">Hard — 5 attempts</option>
+          </select>
+        </div>
+
+        <div class="control-group checkbox-control">
+          <input id="spoiler-toggle" type="checkbox" />
+          <label for="spoiler-toggle">Spoiler-safe mode</label>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stat-card">
+          <span class="stat-label">Played</span>
+          <strong id="games-played">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Won</span>
+          <strong id="games-won">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Current Streak</span>
+          <strong id="current-streak">0</strong>
+        </div>
+
+        <div class="stat-card">
+          <span class="stat-label">Best Streak</span>
+          <strong id="best-streak">0</strong>
+        </div>
+
+        <button id="reset-stats-button" class="secondary-button">Reset Stats</button>
+      </section>
+
+      <div class="guess-area">
+        <div class="search-wrapper">
+          <input
+            id="guess-input"
+            type="text"
+            placeholder="Type a character's name..."
+            autocomplete="off"
+          />
+          <div id="search-results" class="search-results hidden"></div>
+        </div>
+
+        <button id="guess-button">Guess</button>
+        <button id="restart-button">Restart</button>
+      </div>
+
+      <p id="message"></p>
+
+      <section id="answer-reveal" class="answer-reveal hidden">
+        <span id="answer-label" class="answer-label">Answer</span>
+
+        <div class="answer-content">
+          <img id="answer-image" class="answer-image" src="" alt="" />
+
+          <div>
+            <h2 id="answer-name"></h2>
+            <p id="answer-details"></p>
+          </div>
+        </div>
+      </section>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Guess</th>
+              <th>Gender</th>
+              <th>Role</th>
+              <th>Affiliation</th>
+              <th>First Season</th>
+              <th class="spoiler-column">Status</th>
+              <th class="spoiler-column">Relation to Dexter</th>
+            </tr>
+          </thead>
+          <tbody id="guess-table-body"></tbody>
+        </table>
+      </div>
+
+      <section class="available-section">
+        <div class="section-header">
+          <h2>Available Characters</h2>
+          <button id="toggle-characters" class="small-toggle-button">Hide</button>
+        </div>
+
+        <div id="available-characters"></div>
+      </section>
+
+      <section class="legend-section">
+        <div class="section-header">
+          <h2>How the clues work</h2>
+          <button id="toggle-help" class="small-toggle-button">Hide</button>
+        </div>
+
+        <div class="legend-grid">
+          <div class="legend-card">
+            <span class="legend-box legend-green"></span>
+            <div>
+              <strong>Green</strong>
+              <p>Exact match. That value is correct for the hidden character.</p>
+            </div>
+          </div>
+
+          <div class="legend-card">
+            <span class="legend-box legend-yellow"></span>
+            <div>
+              <strong>Yellow</strong>
+              <p>
+                Close clue <strong>First Season</strong>
+                The number indicates the season where the character first appears <strong>↑</strong> means the hidden character
+                appears in a later season, and <strong>↓</strong> means earlier
+              </p>
+            </div>
+          </div>
+
+          <div class="legend-card">
+            <span class="legend-box legend-red"></span>
+            <div>
+              <strong>Red</strong>
+              <p>Wrong. That value does not match the hidden character.</p>
+            </div>
+          </div>
+
+          <div class="legend-card">
+            <span class="legend-box legend-spoiler"></span>
+            <div>
+              <strong>Spoiler-safe mode</strong>
+              <p>Hides status and relation to Dexter clues to avoid major character spoilers.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <audio id="dark-mode-audio" src="assets/Tonights the night Dexter but its combined with the blood theme in Dexter.mp3" preload="auto"></audio>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="data.js"></script>
+
+  <script src="js/utils.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/jquery-ui.js"></script>
+</body>
+</html>

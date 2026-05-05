@@ -1,0 +1,190 @@
+.title-row {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  font-size: 3.4rem;
+  color: var(--accent);
+  letter-spacing: 2px;
+  line-height: 1;
+  transition: color 0.45s ease, text-shadow 0.45s ease;
+}
+
+body.dark-mode .title {
+  text-shadow: 0 0 16px rgba(193, 18, 31, 0.2);
+}
+
+body.knife-slash .title::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: 50%;
+  width: 110%;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--slash);
+  transform: scaleX(0) rotate(-8deg);
+  transform-origin: left;
+  animation: slash-line 0.55s ease-in-out forwards;
+}
+
+.knife-button {
+  position: relative;
+  width: 136px;
+  height: 58px;
+  border: 1px solid var(--knife-shell-border);
+  border-radius: 999px;
+  background: var(--knife-shell);
+  box-shadow: 0 12px 28px var(--shadow);
+  cursor: pointer;
+  padding: 0;
+  overflow: visible;
+  transition:
+    transform 0.2s ease,
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.knife-button:hover {
+  transform: translateY(-2px);
+}
+
+.knife-svg {
+  width: 122px;
+  height: 44px;
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  transform: rotate(-6deg);
+}
+
+.knife-blade-main {
+  fill: url(#bladeGradient);
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.15));
+}
+
+.knife-blade-edge {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0.85;
+}
+
+.knife-bolster {
+  fill: #9d7d52;
+  stroke: #d4b07d;
+  stroke-width: 1.5;
+}
+
+.knife-handle-shape {
+  fill: url(#handleGradient);
+  stroke: #7a5648;
+  stroke-width: 2;
+}
+
+.knife-rivet {
+  fill: #d7b06e;
+}
+
+.knife-drip {
+  position: absolute;
+  width: 5px;
+  border-radius: 999px;
+  background: var(--blood);
+  opacity: 0.95;
+}
+
+body.light-mode .knife-drip {
+  display: none;
+}
+
+.drip-one {
+  left: 42px;
+  top: 35px;
+  height: 14px;
+  animation: drip-fall 2.8s ease-in-out infinite;
+}
+
+.drip-two {
+  left: 56px;
+  top: 35px;
+  width: 4px;
+  height: 11px;
+  animation: drip-fall 3.1s ease-in-out infinite 0.7s;
+}
+
+.drip-three {
+  left: 66px;
+  top: 35px;
+  width: 6px;
+  height: 16px;
+  animation: drip-fall 2.5s ease-in-out infinite 1.3s;
+}
+
+body.knife-slash .knife-button {
+  animation: knife-cross-title 0.85s ease-in-out;
+}
+
+@keyframes drip-fall {
+  0% {
+    transform: translateY(-4px) scaleY(0.45);
+    opacity: 0;
+  }
+
+  18% {
+    opacity: 1;
+  }
+
+  62% {
+    transform: translateY(11px) scaleY(1);
+    opacity: 0.95;
+  }
+
+  100% {
+    transform: translateY(20px) scaleY(0.85);
+    opacity: 0;
+  }
+}
+
+@keyframes knife-cross-title {
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  35% {
+    transform: translateX(-260px) rotate(-13deg);
+  }
+
+  72% {
+    transform: translateX(-260px) rotate(-13deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes slash-line {
+  0% {
+    transform: scaleX(0) rotate(-8deg);
+    opacity: 0;
+  }
+
+  35% {
+    transform: scaleX(1) rotate(-8deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleX(1) rotate(-8deg);
+    opacity: 0;
+  }
+}

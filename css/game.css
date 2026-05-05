@@ -1,0 +1,129 @@
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  margin-top: 14px;
+}
+
+th {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 4px;
+  text-align: center;
+  transition: color 0.45s ease;
+}
+
+td {
+  padding: 14px;
+  border-radius: 18px;
+  text-align: center;
+  font-weight: bold;
+  min-width: 150px;
+  max-width: 220px;
+  height: 90px;
+  font-size: 1rem;
+}
+
+.name-cell {
+  background: var(--name-cell);
+  color: var(--text);
+  min-width: 360px;
+  transition:
+    background 0.45s ease,
+    color 0.45s ease;
+}
+
+.character-name-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  padding-left: 10px;
+}
+
+.character-avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 16px;
+  border: 2px solid var(--input-border);
+  background: transparent;
+  flex-shrink: 0;
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.correct {
+  background: var(--correct);
+  color: white;
+}
+
+.close {
+  background: var(--close);
+  color: white;
+}
+
+.wrong {
+  background: var(--wrong);
+  color: white;
+}
+
+body.spoiler-safe .spoiler-column {
+  display: none;
+}
+
+.answer-reveal {
+  margin: 14px 0 18px;
+  padding: 14px;
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  background: var(--legend-bg);
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.answer-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.answer-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.answer-image {
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 18px;
+  border: 2px solid var(--input-border);
+  background: transparent;
+  flex-shrink: 0;
+}
+
+.answer-content h2 {
+  margin: 0 0 4px;
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.answer-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}

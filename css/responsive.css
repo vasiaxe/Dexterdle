@@ -1,0 +1,106 @@
+@media (max-width: 850px) {
+  .stats-section {
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
+  }
+
+  .secondary-button {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2.35rem;
+  }
+
+  .title-row {
+    gap: 10px;
+  }
+
+  .knife-button {
+    width: 108px;
+    height: 48px;
+  }
+
+  .knife-svg {
+    width: 96px;
+    height: 38px;
+    left: 6px;
+    top: 5px;
+  }
+
+  .drip-one {
+    left: 34px;
+    top: 31px;
+  }
+
+  .drip-two {
+    left: 45px;
+    top: 31px;
+  }
+
+  .drip-three {
+    left: 54px;
+    top: 31px;
+  }
+
+  @keyframes knife-cross-title {
+    0% {
+      transform: translateX(0) rotate(0deg);
+    }
+
+    35% {
+      transform: translateX(-185px) rotate(-13deg);
+    }
+
+    72% {
+      transform: translateX(-185px) rotate(-13deg);
+    }
+
+    100% {
+      transform: translateX(0) rotate(0deg);
+    }
+  }
+
+  .game-card {
+    padding: 16px;
+  }
+
+  .controls-panel {
+    align-items: stretch;
+  }
+
+  .control-group,
+  .checkbox-control {
+    width: 100%;
+  }
+
+  select {
+    width: 100%;
+  }
+
+  button:not(.knife-button) {
+    flex: 1;
+  }
+
+  td {
+    min-width: 120px;
+    max-width: 180px;
+    height: 80px;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .name-cell {
+    min-width: 280px;
+  }
+
+  .character-avatar {
+    width: 58px;
+    height: 58px;
+  }
+
+  .legend-card p {
+    font-size: 0.9rem;
+  }
+}

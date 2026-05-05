@@ -1,0 +1,178 @@
+.search-results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: var(--card);
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 10;
+  max-height: 280px;
+  overflow-y: auto;
+  box-shadow: 0 16px 40px var(--shadow);
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.2s ease, color 0.45s ease;
+}
+
+.search-result-item:hover,
+.search-result-item.active {
+  background: var(--name-cell);
+}
+
+.search-result-item.active {
+  outline: 1px solid var(--accent);
+  outline-offset: -1px;
+}
+
+.search-result-avatar {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  border: 1px solid var(--input-border);
+  background: transparent;
+  flex-shrink: 0;
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.available-section {
+  margin-top: 28px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.available-section h2,
+.legend-section h2,
+.how-to-play-section h2 {
+  font-size: 1.1rem;
+  color: var(--muted);
+  transition: color 0.45s ease;
+}
+
+.small-toggle-button {
+  padding: 7px 11px !important;
+  border-radius: 999px !important;
+  font-size: 0.8rem !important;
+}
+
+#available-characters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.character-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-border);
+  color: var(--text);
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease,
+    color 0.45s ease;
+}
+
+.tag-avatar {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 999px;
+  border: 1px solid var(--input-border);
+  background: transparent;
+  flex-shrink: 0;
+  transition:
+    background 0.45s ease,
+    border-color 0.45s ease;
+}
+
+.how-to-play-section,
+.legend-section {
+  margin-top: 28px;
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--legend-bg);
+  border: 1px solid var(--card-border);
+  transition: background 0.45s ease, border-color 0.45s ease;
+}
+
+.how-to-play-content ol {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.legend-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.legend-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.legend-card strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.legend-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.legend-box {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.legend-green {
+  background: var(--correct);
+}
+
+.legend-yellow {
+  background: var(--close);
+}
+
+.legend-red {
+  background: var(--wrong);
+}
+
+.legend-spoiler {
+  background: var(--accent);
+}
