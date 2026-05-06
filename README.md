@@ -89,7 +89,7 @@ The project is split by function:
 
 ## Disclaimer
 
-Dexterdle is a fan-made, non-commercial portfolio project created for educational purposes. Dexter and related character names, images, audio, and references belong to their respective copyright holders. I do not claim ownership of any Dexter-related assets used in this project
+Dexterdle is a fan-made, non-commercial portfolio project created for educational and entertainment purposes. Dexter and related character names, images, audio, and references belong to their respective copyright holders. I do not claim ownership of any Dexter-related assets used in this project
 
 This project is not affiliated with, endorsed by, or sponsored by the owners of Dexter
 
