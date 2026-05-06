@@ -76,7 +76,7 @@ The project is split by function:
 - Implements keyboard-friendly search with ArrowUp, ArrowDown, Enter, and Escape
 - Persists player statistics and settings across sessions
 - Uses CSS custom properties for theme switching
-- Uses jQuery for UI animation while keeping core game logic in vanilla JavaScript
+- Uses jQuery for UI animation while keeping core game logic in JavaScript
 
 ## Future Improvements
 
