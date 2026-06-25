@@ -1,5 +1,9 @@
 # Dexterdle
 
+## Please Note
+Dexterdle is constantly being updated
+
+## Introduction 
 Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style deduction games. The player guesses a hidden character and receives color-coded feedback based on shared attributes such as gender, role, affiliation, first season, status, and relation to Dexter
 
 ## Preview
