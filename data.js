@@ -438,5 +438,531 @@ const characters = [
     status: "Alive",
     relationToDexter: "Coworker",
     image: "assets/esmee.jpg"
+},
+{
+    name: "Ellen Wolf",
+    gender: "Female",
+    role: "Lawyer",
+    affiliation: "None",
+    firstSeason: 3,
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/ellen.jpg"
+
+},
+{
+    name: "Elliot Larson",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 4,
+    status: "Alive",
+    relationToDexter: "Neighbor",
+    image: "assets/elliot.jpg"
+},
+{
+    name: "Sally Mitchell",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 4,
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/sally.jpg"
+},
+{
+    name: "Rebecca Mitchell",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 4,
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/rebecca.jpg"
+},
+{
+    name: "Professor James Gellar",
+    gender: "Male",
+    role: "Professor",
+    affiliation: "University of Tallahassee",
+    firstSeason: 6,
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/gellar.jpg"
+},
+{
+    name: "Louis Greene",
+    gender: "Male",
+    role: "Intern",
+    affiliation: "Miami Metro",
+    firstSeason: 6,
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/louis.jpg"
+},
+{
+    name: "Nadia",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 7,
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/nadia.jpg"
+},
+{
+    name: "Ryan Chambers",
+    gender: "Female",
+    role: "Intern",
+    affiliation: "Miami Metro",
+    firstSeason: 6,
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/ryan.jpg"
+},
+{
+    name: "Zach Hamilton",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 8,
+    status: "Dead",
+    relationToDexter: "Ally",
+    image: "assets/zach.jpg"
+},
+{
+    name: "Neil Perry",
+    gender: "Male",
+    role: "Criminal",
+    affiliation: "None",
+    firstSeason: 1,
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/neil.jpg"
+}
+];
+
+const new_blood_characters = [
+{
+    name: "Kurt Caldwell",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/kurt.jpg"
+},
+{
+    name: "Angela Bishop",
+    gender: "Female",
+    role: "Chief of Police",
+    affiliation: "Iron Lake Police Department",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "Partner",
+    image: "assets/angela.jpg"
+},
+{
+    name: "Sergeant Logan",
+    gender: "Male",
+    role: "Sergeant",
+    affiliation: "Iron Lake Police Department",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "Friend",
+    image: "assets/logan.jpg"
+},
+{
+    name: "Audrey Bishop",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "Friend",
+    image: "assets/audrey.jpg"
+},
+{
+    name: "Matt Caldwell",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/matt.jpg"
+},
+{
+    name: "Edward Olsen",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/edward.jpg"
+},
+{
+    name: "Fred Jr.",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "Fred's Fish & Game",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "Coworker",
+    image: "assets/fred.jpg"
+},
+{
+    name: "Tess Silvera",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "Friend",
+    image: "assets/tess.jpg"
+},
+{
+    name: "Abraham Brown",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/abraham.jpg"
+},
+{
+    name: "Molly Park",
+    gender: "Female",
+    role: "Podcaster",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/molly.jpg"
+},
+{
+    name: "Elric Kane",
+    gender: "Male",
+    role: "Truck Driver",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/elric.jpg"
+},
+{
+    name: "Ethan Williams",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/ethan.jpg"
+},
+{
+    name: "Esther",
+    gender: "Female",
+    role: "Dispatcher",
+    affiliation: "Iron Lake Police Department",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/esther.jpg"
+},
+{
+    name: "Teddy Reed",
+    gender: "Male",
+    role: "Police Officer",
+    affiliation: "Iron Lake Police Department",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/teddy.jpg"
+},
+{
+    name: "Gig",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/gig.jpg"
+},
+{
+    name: "Wiggles the Clown",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/wiggles.jpg"
+},
+{
+    name: "Zach Wright",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/wright.jpg"
+},
+{
+    name: "Susan",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/susan.jpg"
+},
+{
+    name: "Jasper Hodge",
+    gender: "Male",
+    role: "Drug Dealer",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/jasper.jpg"
+},
+{
+    name: "Lily Kosnicki",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 9,
+    firstSeasonLabel: "New Blood",
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/lily.jpg"
+}
+
+];
+
+const resurrection_characters = [
+{
+    name: "Leon Prater",
+    gender: "Male",
+    role: "Billionaire",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/leon.jpg"
+},
+{
+    name: "Al Walker",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Enemy",
+    image: "assets/al.jpg"
+},
+{
+    name: "Blessing Kamara",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Friend",
+    image: "assets/blessing.jpg"
+},
+{
+    name: "Charley Brown",
+    gender: "Female",
+    role: "Head of Security",
+    affiliation: "Leon Prater",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Enemy",
+    image: "assets/charley.jpg"
+},
+{
+    name: "Chike",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/chike.jpg"
+},
+{
+    name: "Claudette Wallace",
+    gender: "Female",
+    role: "Detective",
+    affiliation: "New York Police Department",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Enemy",
+    image: "assets/claudette.jpg"
+},
+{
+    name: "Constance Kamara",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Friend",
+    image: "assets/constance.jpg"
+},
+{
+    name: "Cooper Morris",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "None",
+    image: "assets/cooper.jpg"
+},
+{
+    name: "Elsa Rivera",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/elsa.jpg"
+},
+{
+    name: "Gareth Pike",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/gareth.jpg"
+},
+{
+    name: "Gareth's twin",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/twin.jpg"
+},
+{
+    name: "Gigi Jones",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/gigi.jpg"
+},
+{
+    name: "Joy Kamara",
+    gender: "Female",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Friend",
+    image: "assets/joy.jpg"
+},
+{
+    name: "Lance Thomas",
+    gender: "Male",
+    role: "Civilian",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "None",
+    image: "assets/lance.jpg"
+},
+{
+    name: "Lowell Sloane",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/lowell.jpg"
+},
+{
+    name: "Melvin Oliva",
+    gender: "Female",
+    role: "Detective",
+    affiliation: "New York Police Department",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Alive",
+    relationToDexter: "Enemy",
+    image: "assets/melvin.jpg"
+},
+{
+    name: "Mia LaPierre",
+    gender: "Female",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/mia.jpg"
+},
+{
+    name: "Ronald Schmidt",
+    gender: "Male",
+    role: "Serial Killer",
+    affiliation: "None",
+    firstSeason: 10,
+    firstSeasonLabel: "Resurrection",
+    status: "Dead",
+    relationToDexter: "Enemy",
+    image: "assets/ronald.jpg"
 }
 ];

@@ -72,8 +72,10 @@ function resetStats() {
 
 function loadSettings() {
   const defaultSettings = {
+    gameMode: "infinite",
     difficulty: "normal",
     spoilerSafe: false,
+    content: "original",
     theme: "dark"
   };
 
@@ -92,8 +94,10 @@ function loadSettings() {
 
 function saveSettings() {
   const settings = {
+    gameMode: currentGameMode,
     difficulty: currentDifficulty,
     spoilerSafe: spoilerToggle.checked,
+    content: currentContent,
     theme: document.body.classList.contains("light-mode") ? "light" : "dark"
   };
 
@@ -103,10 +107,14 @@ function saveSettings() {
 function applySavedSettings() {
   const settings = loadSettings();
 
+  currentGameMode = settings.gameMode;
   currentDifficulty = settings.difficulty;
+  currentContent = settings.content;
   maxAttempts = difficultyAttempts[currentDifficulty];
 
+  gameModeSelect.value = currentGameMode;
   difficultySelect.value = currentDifficulty;
+  contentSelect.value = currentContent;
   spoilerToggle.checked = settings.spoilerSafe;
 
   document.body.classList.remove("dark-mode", "light-mode");
@@ -120,4 +128,37 @@ function applySavedSettings() {
   }
 
   applySpoilerMode();
+}
+
+function loadDailyGames() {
+  const savedDailyGames = localStorage.getItem(dailyStorageKey);
+
+  if (!savedDailyGames) {
+    return {};
+  }
+
+  try {
+    return JSON.parse(savedDailyGames);
+  } catch {
+    return {};
+  }
+}
+
+function getDailyGameKey(date, content) {
+  return `${date}:${content}`;
+}
+
+function loadDailyGame(date, content) {
+  const dailyGames = loadDailyGames();
+  const key = getDailyGameKey(date, content);
+
+  return dailyGames[key] || null;
+}
+
+function saveDailyGame(date, content, dailyGame) {
+  const dailyGames = loadDailyGames();
+  const key = getDailyGameKey(date, content);
+
+  dailyGames[key] = dailyGame;
+  localStorage.setItem(dailyStorageKey, JSON.stringify(dailyGames));
 }

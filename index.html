@@ -88,6 +88,14 @@
     <section class="game-card">
       <section class="controls-panel">
         <div class="control-group">
+          <label for="game-mode-select">Game mode</label>
+          <select id="game-mode-select">
+            <option value="infinite" selected>Infinite</option>
+            <option value="daily">Daily Challenge</option>
+          </select>
+        </div>
+
+        <div class="control-group">
           <label for="difficulty-select">Difficulty</label>
           <select id="difficulty-select">
             <option value="easy">Easy — 10 attempts</option>
@@ -96,9 +104,22 @@
           </select>
         </div>
 
+        <div class="control-group">
+          <label for="content-select">Are you caught up?</label>
+          <select id="content-select">
+            <option value="original" selected>Original</option>
+            <option value="new-blood">Dexter: New Blood</option>
+            <option value="resurrection">Dexter: Resurrection</option>
+          </select>
+        </div>
+
         <div class="control-group checkbox-control">
           <input id="spoiler-toggle" type="checkbox" />
           <label for="spoiler-toggle">Spoiler-safe mode</label>
+        </div>
+
+        <div class="resurrection-scene" aria-hidden="true">
+          <div class="resurrection-liberty-image"></div>
         </div>
       </section>
 
@@ -290,8 +311,9 @@
               <strong>Yellow</strong>
               <p>
                 Close clue <strong>First Season</strong>
-                The number indicates the season in which the character appears <strong>↑</strong> means the hidden character
-                appears in a later season, and <strong>↓</strong> means earlier
+                The number indicates the season in which the character appears.
+                <strong>↑</strong> means the hidden character appears in a later season,
+                and <strong>↓</strong> means earlier.
               </p>
             </div>
           </div>
@@ -311,12 +333,32 @@
               <p>Hides status and relation-to-Dexter clues to avoid major character spoilers.</p>
             </div>
           </div>
+
+          <div class="legend-card">
+            <span class="legend-box legend-yellow"></span>
+            <div>
+              <strong>Dexter: New Blood</strong>
+              <p>Adds New Blood characters to the available roster and activates the winter theme.</p>
+            </div>
+          </div>
+
+          <div class="legend-card">
+            <span class="legend-box legend-green"></span>
+            <div>
+              <strong>Dexter: Resurrection</strong>
+              <p>Adds Resurrection characters to the available roster.</p>
+            </div>
+          </div>
         </div>
       </section>
     </section>
   </main>
 
-  <audio id="dark-mode-audio" src="assets/Tonights the night Dexter but its combined with the blood theme in Dexter.mp3" preload="auto"></audio>
+  <audio
+    id="dark-mode-audio"
+    src="assets/Tonights the night Dexter but its combined with the blood theme in Dexter.mp3"
+    preload="auto"
+  ></audio>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="data.js"></script>
@@ -328,6 +370,7 @@
   <script src="js/render.js"></script>
   <script src="js/search.js"></script>
   <script src="js/theme.js"></script>
+  <script src="js/snow.js"></script>
   <script src="js/events.js"></script>
   <script src="js/jquery-ui.js"></script>
 </body>

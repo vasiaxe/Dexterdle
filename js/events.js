@@ -1,7 +1,9 @@
 guessButton.addEventListener("click", handleGuess);
 restartButton.addEventListener("click", restartGame);
 themeToggle.addEventListener("click", toggleTheme);
+gameModeSelect.addEventListener("change", handleGameModeChange);
 difficultySelect.addEventListener("change", handleDifficultyChange);
+contentSelect.addEventListener("change", handleContentChange);
 spoilerToggle.addEventListener("change", handleSpoilerToggle);
 resetStatsButton.addEventListener("click", resetStats);
 
@@ -44,8 +46,11 @@ document.addEventListener("click", function(event) {
   }
 });
 
-applySavedSettings();
-renderStats();
-renderAvailableCharacters();
+async function initializeGame() {
+  applySavedSettings();
+  applyContentMode();
+  renderStats();
+  await startGame();
+}
 
-message.textContent = `Start guessing. Attempts: 0/${maxAttempts}`;
+initializeGame();

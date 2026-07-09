@@ -7,7 +7,9 @@ const tableBody = document.getElementById("guess-table-body");
 const availableCharacters = document.getElementById("available-characters");
 const searchResults = document.getElementById("search-results");
 const themeToggle = document.getElementById("theme-toggle");
+const gameModeSelect = document.getElementById("game-mode-select");
 const difficultySelect = document.getElementById("difficulty-select");
+const contentSelect = document.getElementById("content-select");
 const spoilerToggle = document.getElementById("spoiler-toggle");
 const darkModeAudio = document.getElementById("dark-mode-audio");
 
@@ -30,10 +32,14 @@ const difficultyAttempts = {
 
 const statsStorageKey = "dexterdleStats";
 const settingsStorageKey = "dexterdleSettings";
+const dailyStorageKey = "dexterdleDailyGames";
 
+let currentGameMode = "infinite";
 let currentDifficulty = "normal";
+let currentContent = "original";
+let currentDailyDate = "";
 let maxAttempts = difficultyAttempts[currentDifficulty];
-let targetCharacter = getRandomCharacter();
+let targetCharacter = null;
 let guessedCharacters = [];
 let gameOver = false;
 let selectedCharacterName = "";

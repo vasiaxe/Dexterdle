@@ -4,24 +4,35 @@ Dexterdle is a Dexter-themed character guessing game inspired by Wordle-style de
 
 ## Preview
 
-<img width="1512" height="982" alt="Screenshot 2026-05-05 at 8 14 20 PM" src="https://github.com/user-attachments/assets/a2cf9c63-36a1-4306-8022-87072e70d746" />
+<img width="1512" alt="Dexterdle front page" src="assets/previews/front_page.png" />
 
-<img width="1512" height="982" alt="Screenshot 2026-05-05 at 8 09 01 PM" src="https://github.com/user-attachments/assets/b88dd544-1b42-43c5-87a5-4dcd111c31c0" />
+<img width="1512" alt="Daily challenge" src="assets/previews/daily_challenge.png" />
+
+<img width="1512" alt="Characters" src="assets/previews/characters.png" />
+
+<img width="1512" alt="How to play" src="assets/previews/how_to_play.png" />
+
+<img width="1512" alt="Clues" src="assets/previews/clues.png" />
 
 ## Live Demo
 
-Play Dexterdle here: https://vasiaxe.github.io/Dexterdle/
+Play Dexterdle here: https://dexterdle.vercel.app/
 
 ## Features
 
-- Character guessing game built with HTML, CSS, and JavaScript
+- Character guessing game built with HTML, CSS, JavaScript, and jQuery
+- Daily Challenge mode with one puzzle per day
+- Infinite mode for unlimited random games
+- Content modes for Original Series, New Blood, and Resurrection
 - Custom searchable dropdown with keyboard navigation
 - Image-backed character data
 - Color-coded clue feedback
 - Difficulty modes with dynamic attempt limits
 - Spoiler-safe mode that hides status and relation-to-Dexter clues
-- Persistent game statistics using localStorage
+- Persistent daily progress using localStorage
+- Persistent game statistics and saved user preferences using localStorage
 - Light/dark mode toggle with CSS variables
+- Themed UI styling with custom visual assets and dynamic effects
 - jQuery-powered UI animations and collapsible sections
 - Responsive layout
 
@@ -47,38 +58,46 @@ Play Dexterdle here: https://vasiaxe.github.io/Dexterdle/
 - CSS
 - JavaScript
 - jQuery
+- Vercel Serverless Functions
 - localStorage
 
 ## Project Architecture
 
 The project is split by function:
 
-- `css/theme.css` handles color variables and light/dark mode
-- `css/title-knife.css` handles the animated knife theme toggle
-- `css/game.css` handles the clue table and answer reveal card
-- `css/sections.css` handles dropdowns, character lists, and help sections
-- `js/game.js` handles the core guessing logic
-- `js/search.js` handles the custom search dropdown
-- `js/render.js` handles DOM rendering
-- `js/storage.js` handles localStorage stats and settings
-- `js/theme.js` handles the theme toggle and audio behavior
-- `js/jquery-ui.js` contains jQuery-powered UI animations
+- `api/daily.js handles daily puzzle selection through a Vercel serverless function
+- data.js contains structured character data
+- css/theme.css handles color variables and light/dark mode
+- css/title-knife.css handles the animated knife theme toggle
+- css/game.css handles the clue table and answer reveal card
+- css/sections.css handles dropdowns, character lists, and help sections
+- js/state.js stores shared DOM references and game state
+- js/game.js handles the core guessing logic, game modes, and daily challenge flow
+- js/search.js handles the custom search dropdown
+- js/render.js handles DOM rendering
+- js/storage.js handles localStorage stats, settings, and daily progress
+- js/theme.js handles the theme toggle and audio behavior
+- js/events.js connects UI events to game logic
+- js/jquery-ui.js contains jQuery-powered UI animations
 
 ## Technical Highlights
 
 - Uses structured JavaScript character data to drive game logic
-- Separates state, rendering, search, storage, and theme behavior across modular files
+- Separates state, rendering, search, storage, theme, and event behavior across modular files
 - Implements keyboard-friendly search with ArrowUp, ArrowDown, Enter, and Escape
-- Persists player statistics and settings across sessions
+- Adds Daily Challenge sand Infinite game modes with separate gameplay behavior
+- Uses a Vercel serverless function to provide the daily puzzle target
+- Persists daily guesses, game completion state, statistics, and settings across sessions
 - Uses CSS custom properties for theme switching
 - Uses jQuery for UI animation while keeping core game logic in vanilla JavaScript
+- Includes spoiler-safe behavior for hiding sensitive clues
 
 ## Future Improvements
 
-- Daily challenge mode
 - Shareable results
-- More characters
-- More spoiler-safe settings
+- More spoiler-safe customization
+- Additional character filters and clue types
+- Server-side guess validation for stronger anti-cheat behavior
 - React/TypeScript version
 - Unit tests for comparison logic
 

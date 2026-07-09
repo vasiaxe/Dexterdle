@@ -51,7 +51,7 @@ function handleSearchInput() {
     return;
   }
 
-  const matches = characters
+  const matches = getActiveCharacters()
     .filter(character => !guessedCharacters.includes(character.name))
     .filter(character => normalizeText(character.name).includes(searchText));
 

@@ -1,7 +1,7 @@
 function renderAvailableCharacters() {
   availableCharacters.innerHTML = "";
 
-  characters.forEach(character => {
+  getActiveCharacters().forEach(character => {
     const tag = document.createElement("span");
     tag.classList.add("character-tag");
 
@@ -74,8 +74,8 @@ function renderGuess(guessedCharacter) {
 
     const displayText =
       attribute === "firstSeason"
-        ? getSeasonHint(guessedCharacter.firstSeason)
-        : guessedCharacter[attribute];
+        ? getSeasonHint(guessedCharacter)
+        : getCharacterAttributeDisplay(guessedCharacter, attribute);
 
     row.appendChild(createCell(displayText, resultClass, attribute));
   });
